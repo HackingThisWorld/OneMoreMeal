@@ -16,6 +16,8 @@ const counterDetails = [
     start: 0,
     end: 2500,
     shortText: "$",
+    longText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at arcu urna. Vestibulum et felis eu dolor tristique eleifend. Duis vel magna eget justo vestibulum facilisis quis id justo",
   },
   {
     id: 2,
@@ -25,6 +27,8 @@ const counterDetails = [
     start: 0,
     end: 120,
     shortText: "+",
+    longText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at arcu urna. Vestibulum et felis eu dolor tristique eleifend. Duis vel magna eget justo vestibulum facilisis quis id justo",
   },
   {
     id: 3,
@@ -34,6 +38,8 @@ const counterDetails = [
     start: 0,
     end: 500,
     shortText: "+",
+    longText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at arcu urna. Vestibulum et felis eu dolor tristique eleifend. Duis vel magna eget justo vestibulum facilisis quis id justo",
   },
   {
     id: 4,
@@ -43,6 +49,8 @@ const counterDetails = [
     start: 0,
     end: 250,
     shortText: "$",
+    longText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at arcu urna. Vestibulum et felis eu dolor tristique eleifend. Duis vel magna eget justo vestibulum facilisis quis id justo",
   },
 ];
 
@@ -55,7 +63,7 @@ const CountWrapper = () => {
             {counterDetails.map((counter) => (
               <div key={counter.id} className="p-4 md:w-1/4 sm:w-1/2 w-full">
                 <div>
-                  <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <div className="px-4 hover:shadow-2xl rounded-3xl py-6">
                     <counter.icon className="text-orange-500 w-12 h-12 mb-3 inline-block" />
                     <h2 className="title-font font-medium text-3xl text-gray-900">
                       <CountTextUp
@@ -65,7 +73,12 @@ const CountWrapper = () => {
                       />
                       {counter.shortText}
                     </h2>
-                    <p className="leading-relaxed">{counter.title}</p>
+                    <p className="leading-relaxed text-gray-700">
+                      {counter.title}
+                    </p>
+                    <p className="leading-relaxed mt-5 p-5">
+                      {counter.longText}
+                    </p>
                   </div>
                 </div>
               </div>
