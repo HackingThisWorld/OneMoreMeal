@@ -10,9 +10,10 @@ const Text = () => {
               Can you imagine a world without hunger?
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify, subway tile poke farm-to-table. Franzen you probably
-              haven&apos;t heard of them man bun deep.
+              There are people in this world so hungry that god cannot appear to
+              them except in the form of bread. Let us provide them with
+              OneMoreMeal and make sure one less person goes to sleep with an
+              empty stomach.
             </p>
           </div>
         </div>

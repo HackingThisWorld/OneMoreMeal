@@ -28,7 +28,7 @@ const counterDetails = [
     end: 20,
     shortText: 'k+',
     longText:
-      'Through thoughtful individuals that create our donor support, One More Meal, has provided over 20 thousand plus means. That number continues to increase daily as we continue to feed hungry underprivileged people and animals!',
+      'Our donors generosity has enabled One More Meal to provide more than 20 thousand meals. That number continues to increase daily as we continue to feed the hungry, people or animals.',
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const counterDetails = [
     end: 500,
     shortText: '+',
     longText:
-      'Our aim i.e to help the hungry does not only restricts to the people, we also extend our hand to those poor animals who are unable to speak for their hunger and go to sleep everyday with an empty stomach and dont say a thing. ',
+      'Our aim not only restricts to the people, we also extend our hand to those poor animals who are unable to speak for their hunger and go to sleep everyday with an empty stomach and dont say a thing. ',
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const counterDetails = [
     end: 250,
     shortText: '$',
     longText:
-      'We are also trying to raise donation for our cause so that we can work in other ways too to acheive our target. We utilize the fundraised for promoting the youth for the cause and donate surplus to NGOs so they can also work for cause in their own way.',
+      'We are constantly trying to raise for for this noble cause. We utilize the fundraised for promoting the youth for the cause and donate surplus to NGOs so they can also work for cause in their own way.',
   },
 ];
 
@@ -62,7 +62,7 @@ const CountWrapper = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-content-center">
             {counterDetails.map((counter) => (
               <div className="p-4" key={counter.id}>
-                <div className="px-4 hover:shadow-2xl min-h-[450px] rounded-3xl py-6">
+                <div className="px-4 hover:shadow-2xl min-h-[400px] rounded-3xl py-6">
                   <div className="px-5 ">
                     <counter.icon className="text-orange-500 w-12 h-12 mb-3 inline-block" />
                     <h2 className="title-font font-medium text-3xl text-gray-900">
