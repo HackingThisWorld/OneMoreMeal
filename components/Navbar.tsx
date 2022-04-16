@@ -24,20 +24,12 @@ const Navbar: FC = () => {
             <FiTwitter />
           </div>
           <div className="cursor-pointer">
-            <a
-              href="https://www.youtube.com/channel/UCGy2UZIpMkT_halxshGv8iA"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" target="_blank" rel="noreferrer">
               <FiYoutube />
             </a>
           </div>
           <div className="cursor-pointer">
-            <a
-              href="https://www.instagram.com/aodgotitpoppin/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" target="_blank" rel="noreferrer">
               <FiInstagram />
             </a>
           </div>
