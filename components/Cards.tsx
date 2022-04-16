@@ -33,7 +33,7 @@ const cardDetails = [
 const Cards = () => {
   return (
     <>
-      <section className="text-gray-600 mt-16 body-font">
+      <section className="text-gray-600  mt-16 body-font">
         <div className="container px-5 mx-auto">
           <div className="flex flex-col text-center w-full">
             <h1 className="sm:text-5xl pb-2 border-b-4 border-gray-600 text-2xl font-medium title-font mb-4 text-gray-900">
@@ -53,8 +53,8 @@ const Cards = () => {
           {/* <div className="flex flex-wrap items-center justify-center -m-4"> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center">
             {cardDetails.map((card) => (
-              <div className="p-4" key={card.id}>
-                <div className="h-full border-2 shadow-xl border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="p-4 " key={card.id}>
+                <div className="h-full border-2 hover:shadow-xl shadow-md border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                   <img
                     className="lg:h-48 md:h-36 w-full object-cover object-center"
                     src={card.image}

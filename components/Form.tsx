@@ -1,4 +1,4 @@
-import { useForm } from "@mantine/form";
+import { useForm } from '@mantine/form';
 import {
   Box,
   TextInput,
@@ -6,8 +6,8 @@ import {
   Button,
   Textarea,
   Group,
-} from "@mantine/core";
-import { TimeInput } from "@mantine/dates";
+} from '@mantine/core';
+import { TimeInput } from '@mantine/dates';
 function Form() {
   const form = useForm<{
     name: string;
@@ -17,39 +17,39 @@ function Form() {
     note: string | undefined;
   }>({
     initialValues: {
-      name: "",
-      shopName: "",
-      shopAddress: "",
+      name: '',
+      shopName: '',
+      shopAddress: '',
       time: undefined,
       note: undefined,
     },
     validate: (values) => ({
-      name: values.name.length < 2 ? "Too short name" : null,
+      name: values.name.length < 2 ? 'Too short name' : null,
 
-      shopName: values.shopName.length < 2 ? "Too short shop name" : null,
+      shopName: values.shopName.length < 2 ? 'Too short shop name' : null,
       shopAddress:
-        values.shopAddress.length < 2 ? "Too short shop address" : null,
-      time: values.time === undefined ? "time is required" : null,
+        values.shopAddress.length < 2 ? 'Too short shop address' : null,
+      time: values.time === undefined ? 'time is required' : null,
     }),
   });
 
   return (
-    <Box sx={{ maxWidth: 340 }} mx="auto">
+    <Box sx={{ maxWidth: 450 }} mx="auto">
       <form onSubmit={form.onSubmit((values) => console.log(values))}>
         <TextInput
           label="Name"
           placeholder="Name"
-          {...form.getInputProps("name")}
+          {...form.getInputProps('name')}
         />
         <TextInput
           label="Shop Name"
           placeholder="Name"
-          {...form.getInputProps("shopName")}
+          {...form.getInputProps('shopName')}
         />
         <TextInput
           label="Shop Address"
           placeholder="Address"
-          {...form.getInputProps("shopAddress")}
+          {...form.getInputProps('shopAddress')}
         />
         <div className="mt-3 col-span-6 ">
           <label
@@ -63,7 +63,7 @@ function Form() {
             className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
             format="12"
             defaultValue={new Date()}
-            {...form.getInputProps("time")}
+            {...form.getInputProps('time')}
           />
         </div>
         <div className="mt-3 col-span-6 ">
@@ -73,7 +73,7 @@ function Form() {
           >
             Note for us
           </label>
-          <Textarea placeholder="Note" {...form.getInputProps("note")} />
+          <Textarea placeholder="Note" {...form.getInputProps('note')} />
         </div>
 
         <Group position="right" mt="md">
@@ -98,7 +98,7 @@ function Form() {
       duration-150
       ease-in-out"
           >
-            Send
+            Notify Us
           </button>
         </Group>
       </form>
