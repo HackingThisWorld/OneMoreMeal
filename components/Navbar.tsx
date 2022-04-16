@@ -1,20 +1,48 @@
-import React, { FC } from "react";
-import { FiTwitter, FiYoutube, FiInstagram } from "react-icons/fi";
+import React, { FC } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { FiTwitter, FiYoutube, FiInstagram } from 'react-icons/fi';
 
 const Navbar: FC = () => {
+  const router = useRouter();
+
   return (
     <>
       <nav className="max-w-full py-5 flex w-screen justify-around items-center text-white bg-black px-6">
         <div className="items flex gap-8">
-          <a href="#">
-            <div className="hover-underline-animation">HOME</div>
-          </a>
-          <a href="#">
-            <div className="hover-underline-animation">ABOUT</div>
-          </a>
-          <a href="#">
-            <div className="hover-underline-animation">CONTACT</div>
-          </a>
+          <Link href={`/`}>
+            <a
+              className={`${
+                router.pathname === '/'
+                  ? 'border-b-2'
+                  : 'hover-underline-animation'
+              }`}
+            >
+              HOME
+            </a>
+          </Link>
+          <Link href="/about">
+            <a
+              className={`${
+                router.pathname === '/about'
+                  ? 'border-b-2'
+                  : 'hover-underline-animation'
+              }`}
+            >
+              ABOUT
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a
+              className={`${
+                router.pathname === '/contact'
+                  ? 'border-b-2'
+                  : 'hover-underline-animation'
+              }`}
+            >
+              CONTACT
+            </a>
+          </Link>
         </div>
 
         <div className="w-36">{/* <img alt="AOD logo" src={AOD.src} /> */}</div>
