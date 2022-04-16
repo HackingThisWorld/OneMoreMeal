@@ -9,11 +9,11 @@ import CTA2 from "../components/CTA2";
 import Footer from "../components/Footer";
 
 const Home = () => {
-  const [opened, setOpened] = useState(false);
+ 
 
   return (
     <>
-      <Hero opened={opened} setOpened={setOpened} />
+      <Hero />
       <Cards />
       <Text />
       <CTA1 />
