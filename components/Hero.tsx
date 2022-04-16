@@ -24,7 +24,7 @@ export default function Hero() {
             <polygon points="50,0 100,0 50,100 0,100" />
           </svg>
 
-          {/* <Popover>
+          <Popover>
             <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
               <nav
                 className="relative flex items-center justify-between sm:h-10 lg:justify-start"
@@ -35,14 +35,14 @@ export default function Hero() {
                     <div className="-mr-2 flex items-center md:hidden">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
                         <span className="sr-only">Open main menu</span>
-                        <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                        {/* <MenuIcon className="h-6 w-6" aria-hidden="true" /> */}
                       </Popover.Button>
                     </div>
                   </div>
                 </div>
               </nav>
             </div>
-          </Popover> */}
+          </Popover>
 
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
@@ -80,13 +80,13 @@ export default function Hero() {
             </div>
           </main>
         </div>
-      </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
           src={BannerImage.src}
           alt=""
         />
+      </div>
       </div>
     </div>
   );
