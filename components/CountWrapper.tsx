@@ -1,44 +1,48 @@
-import React from 'react';
-import CountTextUp from './CountUp';
+import React from "react";
+import CountTextUp from "./CountUp";
 import {
   GiOpenedFoodCan,
   GiStomach,
   GiSittingDog,
   GiReceiveMoney,
-} from 'react-icons/gi';
+} from "react-icons/gi";
 
 const counterDetails = [
   {
     id: 1,
-    title: 'Food Value Saved',
+    title: "Food Value Saved",
     duration: 1.2,
     icon: GiOpenedFoodCan,
     start: 0,
     end: 2500,
+    shortText: "$",
   },
   {
     id: 2,
-    title: 'Stomachs Fed',
+    title: "Stomachs Fed",
     duration: 1.2,
     icon: GiStomach,
     start: 0,
     end: 120,
+    shortText: "+",
   },
   {
     id: 3,
-    title: 'Animals Helped',
+    title: "Animals Helped",
     duration: 1.2,
     icon: GiSittingDog,
     start: 0,
     end: 500,
+    shortText: "+",
   },
   {
     id: 4,
-    title: 'Donation Raised',
+    title: "Donation Raised",
     duration: 1.2,
     icon: GiReceiveMoney,
     start: 0,
     end: 250,
+    shortText: "$",
   },
 ];
 
@@ -59,7 +63,7 @@ const CountWrapper = () => {
                         start={counter.start}
                         end={counter.end}
                       />
-                      +
+                      {counter.shortText}
                     </h2>
                     <p className="leading-relaxed">{counter.title}</p>
                   </div>
