@@ -15,9 +15,9 @@ const counterDetails = [
     icon: GiOpenedFoodCan,
     start: 0,
     end: 2500,
-    shortText: '$',
+    shortText: ' kg',
     longText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at arcu urna. Vestibulum et felis eu dolor tristique eleifend. Duis vel magna eget justo vestibulum facilisis quis id justo',
+      'With the help of our enthsiastic and active team, we are able to save more than 2500 Kgs of food which wouldve been wasted due to the inability of food businesses to sell stale food because of health issues.',
   },
   {
     id: 2,
@@ -25,10 +25,10 @@ const counterDetails = [
     duration: 1.2,
     icon: GiStomach,
     start: 0,
-    end: 120,
-    shortText: '+',
+    end: 20,
+    shortText: 'k+',
     longText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at arcu urna. Vestibulum et felis eu dolor tristique eleifend. Duis vel magna eget justo vestibulum facilisis quis id justo',
+      'Through thoughtful individuals that create our donor support, One More Meal, has provided over 20 thousand plus means. That number continues to increase daily as we continue to feed hungry underprivileged people and animals!',
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const counterDetails = [
     end: 500,
     shortText: '+',
     longText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at arcu urna. Vestibulum et felis eu dolor tristique eleifend. Duis vel magna eget justo vestibulum facilisis quis id justo',
+      'Our aim i.e to help the hungry does not only restricts to the people, we also extend our hand to those poor animals who are unable to speak for their hunger and go to sleep everyday with an empty stomach and dont say a thing. ',
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const counterDetails = [
     end: 250,
     shortText: '$',
     longText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at arcu urna. Vestibulum et felis eu dolor tristique eleifend. Duis vel magna eget justo vestibulum facilisis quis id justo',
+      'We are also trying to raise donation for our cause so that we can work in other ways too to acheive our target. We utilize the fundraised for promoting the youth for the cause and donate surplus to NGOs so they can also work for cause in their own way.',
   },
 ];
 
@@ -59,11 +59,11 @@ const CountWrapper = () => {
     <>
       <section className="text-gray-600 body-font">
         <div className="container px-5 mx-auto">
-          <div className="flex flex-wrap -m-4 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-content-center">
             {counterDetails.map((counter) => (
-              <div key={counter.id} className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div>
-                  <div className="px-4 hover:shadow-2xl rounded-3xl py-6">
+              <div className="p-4" key={counter.id}>
+                <div className="px-4 hover:shadow-2xl min-h-[450px] rounded-3xl py-6">
+                  <div className="px-5 ">
                     <counter.icon className="text-orange-500 w-12 h-12 mb-3 inline-block" />
                     <h2 className="title-font font-medium text-3xl text-gray-900">
                       <CountTextUp
@@ -76,10 +76,8 @@ const CountWrapper = () => {
                     <p className="leading-relaxed text-gray-700">
                       {counter.title}
                     </p>
-                    <p className="leading-relaxed mt-5 p-5">
-                      {counter.longText}
-                    </p>
                   </div>
+                  <p className="leading-relaxed p-5">{counter.longText}</p>
                 </div>
               </div>
             ))}
