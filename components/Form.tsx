@@ -13,20 +13,27 @@ function Form() {
     name: string;
     shopName: string;
     shopAddress: string;
+    shopPhone: number;
     time: Date | undefined;
     note: string | undefined;
   }>({
     initialValues: {
-      name: '',
-      shopName: '',
-      shopAddress: '',
+      name: "",
+      shopName: "",
+      shopAddress: "",
+      shopPhone: undefined,
       time: undefined,
       note: undefined,
     },
     validate: (values) => ({
-      name: values.name.length < 2 ? 'Too short name' : null,
-
-      shopName: values.shopName.length < 2 ? 'Too short shop name' : null,
+      name: values.name.length < 2 ? "Too short name" : null,
+      shopPhone:
+        values.shopPhone === undefined
+          ? "number is required"
+          : values.shopPhone >= 100000000 && values.shopPhone <= 999999999
+          ? "You must be at least 9 digits"
+          : null,
+      shopName: values.shopName.length < 2 ? "Too short shop name" : null,
       shopAddress:
         values.shopAddress.length < 2 ? 'Too short shop address' : null,
       time: values.time === undefined ? 'time is required' : null,
@@ -50,6 +57,12 @@ function Form() {
           label="Shop Address"
           placeholder="Address"
           {...form.getInputProps('shopAddress')}
+        />
+        <NumberInput
+          mt="sm"
+          label="Shop Mobile Number"
+          placeholder="Mobile"
+          {...form.getInputProps("shopPhone")}
         />
         <div className="mt-3 col-span-6 ">
           <label
