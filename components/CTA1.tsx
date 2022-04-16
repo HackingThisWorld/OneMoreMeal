@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const CTA1 = () => {
   return (
     <>
       <section className="text-gray-600 body-font">
-        <div className="container px-5 pb-20 mx-auto flex flex-wrap">
+        <div className="container px-5 pb-12 my-8 mx-auto flex flex-wrap">
           <div className="flex flex-wrap justify-center items-center -m-4">
             <div className="p-4 lg:w-1/3 md:w-full">
               <div className="flex rounded-lg p-8 sm:flex-row flex-col">

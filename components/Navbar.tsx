@@ -1,19 +1,19 @@
-import Logo from "../Assets/logo.png";
+import Logo from '../Assets/logo.png';
 
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import { useRouter } from "next/router";
-import Link from "next/link";
+import { Fragment } from 'react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
   const router = useRouter();
   return (
-    <Disclosure as="nav" className="bg-orange-600 shadow">
+    <Disclosure as="nav" className="bg-orange-600 py-[5px] shadow">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,12 +21,12 @@ export default function Navbar() {
               <div className="flex">
                 <div className="flex-shrink-0 flex items-center">
                   <img
-                    className="block lg:hidden  h-28 w-auto text-black"
+                    className="block lg:hidden  h-20 w-auto text-black"
                     src={Logo.src}
                     alt="Workflow"
                   />
                   <img
-                    className="hidden lg:block  h-24 w-auto"
+                    className="hidden lg:block h-24 w-auto"
                     src={Logo.src}
                     alt="Workflow"
                   />
@@ -35,10 +35,10 @@ export default function Navbar() {
                   <Link href={`/`}>
                     <a
                       href="#"
-                      className={`border-transparent text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium ${
-                        router.pathname === "/"
-                          ? "border-b-2 border-black"
-                          : "hover-underline-animation"
+                      className={`border-transparent text-white hover:border-black hover:text-black inline-flex items-center px-1 pt-1 text-sm font-medium ${
+                        router.pathname === '/'
+                          ? 'border-b-2 border-black'
+                          : 'hover-underline-animation'
                       }`}
                     >
                       HOME
@@ -47,10 +47,10 @@ export default function Navbar() {
                   <Link href={`/about`}>
                     <a
                       href="#"
-                      className={`border-transparent text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium ${
-                        router.pathname === "/about"
-                          ? "border-b-2 border-black"
-                          : "hover-underline-animation"
+                      className={`border-transparent text-white hover:border-black hover:text-black inline-flex items-center px-1 pt-1 text-sm font-medium ${
+                        router.pathname === '/about'
+                          ? 'border-b-2 border-black'
+                          : 'hover-underline-animation'
                       }`}
                     >
                       ABOUT
@@ -59,10 +59,10 @@ export default function Navbar() {
                   <Link href={`/contact`}>
                     <a
                       href="#"
-                      className={`border-transparent text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  text-sm font-medium ${
-                        router.pathname === "/contact"
-                          ? "border-b-2 border-black"
-                          : "hover-underline-animation"
+                      className={`border-transparent text-white hover:border-black hover:text-black inline-flex items-center px-1 pt-1  text-sm font-medium ${
+                        router.pathname === '/contact'
+                          ? 'border-b-2 border-black'
+                          : 'hover-underline-animation'
                       }`}
                     >
                       CONTACT US
@@ -88,8 +88,8 @@ export default function Navbar() {
                           <a
                             href="#"
                             className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              active ? 'bg-gray-100' : '',
+                              'block px-4 py-2 text-sm text-gray-700'
                             )}
                           >
                             Your Profile
@@ -101,8 +101,8 @@ export default function Navbar() {
                           <a
                             href="#"
                             className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              active ? 'bg-gray-100' : '',
+                              'block px-4 py-2 text-sm text-gray-700'
                             )}
                           >
                             Settings
@@ -114,8 +114,8 @@ export default function Navbar() {
                           <a
                             href="#"
                             className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              active ? 'bg-gray-100' : '',
+                              'block px-4 py-2 text-sm text-gray-700'
                             )}
                           >
                             Sign out
@@ -128,7 +128,7 @@ export default function Navbar() {
               </div>
               <div className="-mr-2 flex items-center sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white  focus:outline-none">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-black  focus:outline-none">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -141,53 +141,35 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className=" flex-col pt-2 pb-3 space-y-1 ">
-              {/* Current: "bg-orange-50 border-orange-500 text-orange-700", Default: "border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
+            <div className="pt-2 pb-3 space-y-1">
               <Disclosure.Button
-              className={`border-transparent text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  text-sm font-medium ${
-                router.pathname === "/"
-                  ? "border-b-2 border-black"
-                  : "hover-underline-animation"
-              }`}
-               >
-                <Link href={`/`}>
-                  <a
-                    href="#"
-                    
-                  >
-                    HOME
-                  </a>
-                </Link>
-              </Disclosure.Button>
-              <Disclosure.Button
-              className={`border-transparent text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  text-sm font-medium ${
-                router.pathname === "/about"
-                  ? "border-b-2 border-black"
-                  : "hover-underline-animation"
-              }`}
+                className={` block pl-3 pr-4 py-2 text-base font-medium  w-11/12 m-auto rounded-md
+                ${
+                  router.pathname === '/'
+                    ? 'bg-orange-50 border-orange-400 text-black'
+                    : ''
+                }
+                `}
               >
-                <Link href={`/about`}>
-                  <a
-                    href="#"
-                    
-                  >
-                    ABOUT
-                  </a>
-                </Link>
+                <Link href={`/`}>Home</Link>
               </Disclosure.Button>
-              <Disclosure.Button>
-                <Link href={`/contact`}>
-                  <a
-                    href="#"
-                    className={`border-transparent text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  text-sm font-medium ${
-                      router.pathname === "/contact"
-                        ? "border-b-2 border-black"
-                        : "hover-underline-animation"
-                    }`}
-                  >
-                    CONTACT US
-                  </a>
-                </Link>
+              <Disclosure.Button
+                className={`border-transparent text-black hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium w-11/12 m-auto rounded-md  ${
+                  router.pathname === '/about'
+                    ? 'bg-orange-50 border-orange-400 text-black'
+                    : ''
+                }`}
+              >
+                <Link href={`/about`}>About Us</Link>
+              </Disclosure.Button>
+              <Disclosure.Button
+                className={`border-transparent text-black hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium w-11/12 m-auto rounded-md  ${
+                  router.pathname === '/contact'
+                    ? 'bg-orange-50 border-orange-400 text-black'
+                    : ''
+                }`}
+              >
+                <Link href={`/contact`}>Contact Us</Link>
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>
