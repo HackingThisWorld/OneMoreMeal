@@ -12,7 +12,7 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 function Hero() {
-  const [opened, setOpened] = useState(false);
+  const [notify, setNofify] = useState(false);
   const [donate, setDonate] = useState(false);
   return (
     <div className="relative bg-white overflow-hidden">
@@ -65,17 +65,17 @@ function Hero() {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <Modal
-                  opened={opened}
+                  opened={notify}
                   transition="pop"
                   transitionDuration={400}
                   transitionTimingFunction="ease"
-                  onClose={() => setOpened(false)}
+                  onClose={() => setNofify(false)}
                   title="One More Meal"
                 >
                   <Form />
                 </Modal>
                 <button
-                  onClick={() => setOpened(true)}
+                  onClick={() => setNofify(true)}
                   className="rounded-md shadow"
                 >
                   <a
