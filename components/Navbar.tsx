@@ -1,7 +1,5 @@
-import React, { FC } from 'react';
-import Image from 'next/image';
-// import AOD from '../Assets/Images/AOD3 LOGO.svg';
-import { FiTwitter, FiYoutube, FiInstagram } from 'react-icons/fi';
+import React, { FC } from "react";
+import { FiTwitter, FiYoutube, FiInstagram } from "react-icons/fi";
 
 const Navbar: FC = () => {
   return (
