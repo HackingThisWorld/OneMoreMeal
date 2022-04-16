@@ -1,4 +1,4 @@
-import { useForm } from '@mantine/form';
+import { useForm } from "@mantine/form";
 import {
   Box,
   TextInput,
@@ -6,8 +6,8 @@ import {
   Button,
   Textarea,
   Group,
-} from '@mantine/core';
-import { TimeInput } from '@mantine/dates';
+} from "@mantine/core";
+import { TimeInput } from "@mantine/dates";
 function Form() {
   const form = useForm<{
     name: string;
@@ -35,8 +35,8 @@ function Form() {
           : null,
       shopName: values.shopName.length < 2 ? "Too short shop name" : null,
       shopAddress:
-        values.shopAddress.length < 2 ? 'Too short shop address' : null,
-      time: values.time === undefined ? 'time is required' : null,
+        values.shopAddress.length < 2 ? "Too short shop address" : null,
+      time: values.time === undefined ? "time is required" : null,
     }),
   });
 
@@ -46,20 +46,21 @@ function Form() {
         <TextInput
           label="Name"
           placeholder="Name"
-          {...form.getInputProps('name')}
+          {...form.getInputProps("name")}
         />
         <TextInput
           label="Shop Name"
           placeholder="Name"
-          {...form.getInputProps('shopName')}
+          {...form.getInputProps("shopName")}
         />
         <TextInput
           label="Shop Address"
           placeholder="Address"
-          {...form.getInputProps('shopAddress')}
+          {...form.getInputProps("shopAddress")}
         />
         <NumberInput
           mt="sm"
+          hideControls
           label="Shop Mobile Number"
           placeholder="Mobile"
           {...form.getInputProps("shopPhone")}
@@ -76,7 +77,7 @@ function Form() {
             className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
             format="12"
             defaultValue={new Date()}
-            {...form.getInputProps('time')}
+            {...form.getInputProps("time")}
           />
         </div>
         <div className="mt-3 col-span-6 ">
@@ -86,7 +87,7 @@ function Form() {
           >
             Note for us
           </label>
-          <Textarea placeholder="Note" {...form.getInputProps('note')} />
+          <Textarea placeholder="Note" {...form.getInputProps("note")} />
         </div>
 
         <Group position="right" mt="md">
