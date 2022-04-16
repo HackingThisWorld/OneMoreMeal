@@ -3,14 +3,15 @@ import { MenuIcon } from "@heroicons/react/outline";
 import BannerImage from "../Assets/HeroBanner.jpg";
 import { Modal, useMantineTheme } from "@mantine/core";
 import Form from "../components/Form";
+import { useState } from "react";
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
   { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
 ];
-
-export default function Hero({ opened, setOpened }) {
+ function Hero() {
+  const [opened, setOpened] = useState(false);
   return (
     <div className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -105,3 +106,4 @@ export default function Hero({ opened, setOpened }) {
     </div>
   );
 }
+export default Hero;
