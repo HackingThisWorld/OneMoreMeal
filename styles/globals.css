@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Roboto+Serif:wght@200;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Roboto+Serif:wght@200;400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,8 +15,16 @@
   position: relative;
 }
 
+body {
+  font-family: "Roboto Serif", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fafafa;
+}
+
 .hover-underline-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);

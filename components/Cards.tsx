@@ -1,32 +1,32 @@
-import React from 'react';
+import React from "react";
 
 const cardDetails = [
   {
     id: 1,
-    title: 'Lessen Food Wastage',
+    title: "Lessen Food Wastage",
     description:
-      'According to the World Food Programme, one-third of all food produced — over 1.3 billion tons of it — is never consumed. We aim to solve the underlying cause of hunger i.e properly utilize the food we produce.',
+      "According to the World Food Programme, one-third of all food produced — over 1.3 billion tons of it — is never consumed. We aim to solve the underlying cause of hunger i.e properly utilize the food we produce.",
     image:
-      'https://cdn.discordapp.com/attachments/941636283208458250/964884265005367387/unknown.png',
-    category: 'category',
+      "https://cdn.discordapp.com/attachments/941636283208458250/964884265005367387/unknown.png",
+    category: "category",
   },
   {
     id: 2,
-    title: 'Take a bite out of hunger.',
+    title: "Take a bite out of hunger.",
     description:
-      'We aim to utilize the leftovers from food businesses and judicially use to for the needy. We aim to feed the hungry be it stray animals or the underpreviledged people and try to reduce the food waste to almost zero.',
+      "We aim to utilize the leftovers from food businesses and judicially use to for the needy. We aim to feed the hungry be it stray animals or the underpreviledged people and try to reduce the food waste to almost zero.",
     image:
-      'http://greatsocietyproblems.weebly.com/uploads/1/0/6/8/106884623/1743242-1416890452427_orig.png',
-    category: 'category',
+      "http://greatsocietyproblems.weebly.com/uploads/1/0/6/8/106884623/1743242-1416890452427_orig.png",
+    category: "category",
   },
   {
     id: 3,
-    title: 'Two Birds One Stone',
+    title: "Two Birds One Stone",
     description:
-      'What we are doing at OneMoreMeal is not just properly managing leftover food from food businesses but we also collect fund and utilize it to not only help the NGOs but parallely promoting the idea by various planned methods.',
+      "What we are doing at OneMoreMeal is not just properly managing leftover food from food businesses but we also collect fund and utilize it to not only help the NGOs but parallely promoting the idea by various planned methods.",
     image:
-      'https://cdn.discordapp.com/attachments/941636283208458250/964828689873379348/unknown.png',
-    category: 'category',
+      "https://cdn.discordapp.com/attachments/941636283208458250/964828689873379348/unknown.png",
+    category: "category",
   },
 ];
 
@@ -36,7 +36,7 @@ const Cards = () => {
       <section className="text-gray-600  mt-16 body-font">
         <div className="container px-5 mx-auto">
           <div className="flex flex-col text-center w-full">
-            <h1 className="sm:text-5xl font-mw pb-2 border-b-4 border-gray-600 text-2xl font-medium title-font mb-4 text-gray-900">
+            <h1 className="sm:text-5xl font-mw pb-2 border-b-4 border-orange-700 text-2xl font-medium title-font mb-4 text-gray-900">
               Our Aim With <span className="text-orange-600">OneMoreMeal</span>
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">

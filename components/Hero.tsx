@@ -48,10 +48,30 @@ function Hero() {
             </div>
           </Popover>
 
+          <Modal
+            opened={donate}
+            transition="pop"
+            transitionDuration={400}
+            transitionTimingFunction="ease"
+            onClose={() => setDonate(false)}
+            title="Donate a Meal"
+          >
+            <Donate />
+          </Modal>
+          <Modal
+            opened={notify}
+            transition="pop"
+            transitionDuration={400}
+            transitionTimingFunction="ease"
+            onClose={() => setNofify(false)}
+            title="One More Meal"
+          >
+            <Form />
+          </Modal>
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <div className="text-4xl flex flex-col tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <div className="block xl:inline">
+                <div className="block xl:inline font-mw">
                   Feed the hungry, Save humanity.
                 </div>
                 <div className="block text-orange-600 xl:inline">
@@ -63,17 +83,7 @@ function Hero() {
                 everyone on the planet. But still as many as 811 million people
                 worldwide go to bed hungry each night.
               </p>
-              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <Modal
-                  opened={notify}
-                  transition="pop"
-                  transitionDuration={400}
-                  transitionTimingFunction="ease"
-                  onClose={() => setNofify(false)}
-                  title="One More Meal"
-                >
-                  <Form />
-                </Modal>
+              <div className="mt-5 sm:mt-8 flex flex-col sm:justify-center sm:flex-row lg:justify-start">
                 <button
                   onClick={() => setNofify(true)}
                   className="rounded-md shadow"
@@ -85,16 +95,6 @@ function Hero() {
                     Notify Us
                   </a>
                 </button>
-                <Modal
-                  opened={donate}
-                  transition="pop"
-                  transitionDuration={400}
-                  transitionTimingFunction="ease"
-                  onClose={() => setDonate(false)}
-                  title="Donate a Meal"
-                >
-                  <Donate />
-                </Modal>
                 <button
                   onClick={() => setDonate(true)}
                   className="mt-3 sm:mt-0 sm:ml-3"
