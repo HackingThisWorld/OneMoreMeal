@@ -1,12 +1,12 @@
-import React from "react";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [data, setData] = React.useState({
-    fullname: "",
-    email: "",
-    message: "",
+    fullname: '',
+    email: '',
+    message: '',
   });
   function handleSubmit(e) {
     e.preventDefault();
@@ -14,9 +14,9 @@ const Contact = () => {
 
     try {
       fetch(`${process.env.NEXT_PUBLIC_API_URL}/form/contact`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           name: data.fullname,
@@ -27,8 +27,8 @@ const Contact = () => {
     } catch (error) {}
 
     // alert(`${data.fullname} ${data.email} ${data.message}`);
-    toast.success("🦄 Wow so easy!", {
-      position: "bottom-right",
+    toast.success('🦄 Wow so easy!', {
+      position: 'bottom-right',
       autoClose: 4000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -57,8 +57,7 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify.
+              Send Us Your Queries or Even Your Appreciation!
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
