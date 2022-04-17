@@ -36,7 +36,7 @@ const Cards = () => {
       <section className="text-gray-600  mt-16 body-font">
         <div className="container px-5 mx-auto">
           <div className="flex flex-col text-center w-full">
-            <h1 className="sm:text-5xl pb-2 border-b-4 border-gray-600 text-2xl font-medium title-font mb-4 text-gray-900">
+            <h1 className="sm:text-5xl font-mw pb-2 border-b-4 border-gray-600 text-2xl font-medium title-font mb-4 text-gray-900">
               Our Aim With <span className="text-orange-600">OneMoreMeal</span>
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">

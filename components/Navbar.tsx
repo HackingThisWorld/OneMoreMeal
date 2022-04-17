@@ -72,7 +72,7 @@ export default function Navbar() {
                     <a
                       href="#"
                       className={`border-transparent text-white hover:border-black hover:text-black inline-flex items-center px-1 pt-1  text-sm font-medium ${
-                        router.pathname === '/contact'
+                        router.pathname === '/leaderboard'
                           ? 'border-b-2 border-black'
                           : 'hover-underline-animation'
                       }`}
@@ -172,7 +172,7 @@ export default function Navbar() {
                     : ''
                 }`}
               >
-                <Link href={`/workflow`}>Workflow Us</Link>
+                <Link href={`/workflow`}>Workflow</Link>
               </Disclosure.Button>
               <Disclosure.Button
                 className={`border-transparent text-black hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium w-11/12 m-auto rounded-md  ${
@@ -185,7 +185,7 @@ export default function Navbar() {
               </Disclosure.Button>
               <Disclosure.Button
                 className={`border-transparent text-black hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium w-11/12 m-auto rounded-md  ${
-                  router.pathname === '/contact'
+                  router.pathname === '/leaderboard'
                     ? 'bg-orange-50 border-orange-400 text-black'
                     : ''
                 }`}

@@ -7,7 +7,7 @@ const Workflow: FC = () => {
         <div className="text-6xl mb-8 text-center font-mw font-bold pb-2 border-orange-700 border-b-4">
           It&apos;s Not What You Think
         </div>
-        <p className="text-3xl flex flex-col gap-4 text-center px-32 first-letter:text-4xl text-gray-700 mt-2 mb-8">
+        <p className="text-3xl flex flex-col gap-4 text-center lg:px-32 first-letter:text-4xl text-gray-700 mt-2 mb-20">
           Ending hunger isn’t about supply. The world produces enough food to
           feed everyone on the planet. The problem is access and availability,
           both of which are disrupted by things like extreme weather, food
@@ -21,24 +21,18 @@ const Workflow: FC = () => {
             together it’s solvable.
           </span>
         </p>
-        <div className="text-3xl border-b-4 my-6 border-b-slate-500 inline ">
+        <div className="md:text-5xl text-4xl pb-2 font-mw border-b-4 my-6 border-b-orange-500 text-center capitalize ">
           How the plateform works
         </div>
-        <p className="text-2xl first-letter:text-4xl text-gray-700 mt-2">
-          Is getting outside and physically planting a tree not an option for
-          you? Do you still want to do something? OneMoreTree has some great and
-          easy steps for you to follow. You just have to go about and select a
-          tree and get your saplings into the earth. This initiative works with
-          people whose business deals with trees and plantations. Contributors
-          can pick the type of tree they want, from Neem to Eucalyptus,we have a
-          long list of distributors listed with us and place an order. Following
-          that , those orders will be forwarded to the other trees selling
-          businesses and other small scale planters who acts like a distributor
-          for us. But thats not only it, we also give a plateform to the young
-          climate enthusiasts to lend their hand in saving the Earth, promote
-          them by providing a leaderboard and prizes for the top saviours and
-          also contribute to other initiatives working towards saving the world
-          with the help of a bit of margin we are keeping in the model.
+        <p className="text-3xl leading-normal first-letter:text-4xl text-gray-700 mt-3 mb-20">
+          To help with our goal and keep the plateform as simple as possible, we
+          have not included any sort of sign up/sign in hassle for the users and
+          contributors so its easy to use for everyone. The contributors are
+          able to notify us with a simple form and the pickup time and all the
+          details are messaged to the volunteers with the help of twilio
+          service. We also notify the contributors with seamless automated
+          messages set up by us with twilio to notify them about successful
+          pickup and even that we have distributed the food to the needy.
         </p>
       </div>
     </div>
