@@ -44,16 +44,16 @@ export default function Navbar() {
                       HOME
                     </a>
                   </Link>
-                  <Link href={`/about`}>
+                  <Link href={`/workflow`}>
                     <a
                       href="#"
                       className={`border-transparent text-white hover:border-black hover:text-black inline-flex items-center px-1 pt-1 text-sm font-medium ${
-                        router.pathname === '/about'
+                        router.pathname === '/workflow'
                           ? 'border-b-2 border-black'
                           : 'hover-underline-animation'
                       }`}
                     >
-                      ABOUT
+                      WORKFLOW
                     </a>
                   </Link>
                   <Link href={`/contact`}>
@@ -66,6 +66,18 @@ export default function Navbar() {
                       }`}
                     >
                       CONTACT US
+                    </a>
+                  </Link>
+                  <Link href={`/leaderboard`}>
+                    <a
+                      href="#"
+                      className={`border-transparent text-white hover:border-black hover:text-black inline-flex items-center px-1 pt-1  text-sm font-medium ${
+                        router.pathname === '/contact'
+                          ? 'border-b-2 border-black'
+                          : 'hover-underline-animation'
+                      }`}
+                    >
+                      LEADERBOARD
                     </a>
                   </Link>
                 </div>
@@ -155,12 +167,12 @@ export default function Navbar() {
               </Disclosure.Button>
               <Disclosure.Button
                 className={`border-transparent text-black hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium w-11/12 m-auto rounded-md  ${
-                  router.pathname === '/about'
+                  router.pathname === '/workflow'
                     ? 'bg-orange-50 border-orange-400 text-black'
                     : ''
                 }`}
               >
-                <Link href={`/about`}>About Us</Link>
+                <Link href={`/workflow`}>Workflow Us</Link>
               </Disclosure.Button>
               <Disclosure.Button
                 className={`border-transparent text-black hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium w-11/12 m-auto rounded-md  ${
@@ -170,6 +182,15 @@ export default function Navbar() {
                 }`}
               >
                 <Link href={`/contact`}>Contact Us</Link>
+              </Disclosure.Button>
+              <Disclosure.Button
+                className={`border-transparent text-black hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium w-11/12 m-auto rounded-md  ${
+                  router.pathname === '/contact'
+                    ? 'bg-orange-50 border-orange-400 text-black'
+                    : ''
+                }`}
+              >
+                <Link href={`/leaderboard`}>Leaderboard</Link>
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>
