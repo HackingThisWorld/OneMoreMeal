@@ -23,7 +23,7 @@ function Form() {
       shopAddress: "",
       shopPhone: undefined,
       time: undefined,
-      note: undefined,
+      note: "",
     },
     validate: (values) => ({
       name: values.name.length < 2 ? "Too short name" : null,
@@ -40,9 +40,40 @@ function Form() {
     }),
   });
 
+  const submitForm = async (data: {
+    name: string;
+    shopName: string;
+    shopAddress: string;
+    shopPhone: number;
+    time: Date | undefined;
+    note: string | undefined;
+  }) => {
+    console.log(data);
+
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/form/requests`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.shopName,
+          shop_name: data.shopName,
+          phone_number: data.shopPhone,
+          address: data.shopAddress,
+          note: data.note || null,
+          pickup_time: data.time.toISOString(),
+        }),
+      }
+    );
+
+    form.reset();
+  };
+
   return (
     <Box sx={{ maxWidth: 450 }} mx="auto">
-      <form onSubmit={form.onSubmit((values) => console.log(values))}>
+      <form onSubmit={form.onSubmit(submitForm)}>
         <TextInput
           label="Name"
           placeholder="Name"
