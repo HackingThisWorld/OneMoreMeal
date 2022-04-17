@@ -8,6 +8,7 @@ import {
   Group,
 } from "@mantine/core";
 import { TimeInput } from "@mantine/dates";
+import { toast } from "react-toastify";
 function Donate() {
   const form = useForm<{
     name: string;
@@ -53,7 +54,33 @@ function Donate() {
         contact_number: data.shopPhone.toString(),
         amount: parseFloat(data.amount),
       }),
-    });
+    })
+      .then(() => {
+        toast.success("Request Submitted!", {
+          position: "bottom-right",
+          autoClose: 2500,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
+      })
+      .then(() => {
+        form.reset();
+        // setNotify(false);
+      })
+      .catch(() => {
+        toast.error("Some Error Occured!", {
+          position: "bottom-right",
+          autoClose: 2500,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
+      });
 
     form.reset();
   };

@@ -8,7 +8,9 @@ import {
   Group,
 } from "@mantine/core";
 import { TimeInput } from "@mantine/dates";
-function Form() {
+import { toast, ToastContainer } from "react-toastify";
+
+function Form({ setNotify }) {
   const form = useForm<{
     name: string;
     shopName: string;
@@ -64,65 +66,90 @@ function Form() {
           pickup_time: data.time.toISOString(),
         }),
       }
-    );
-
-    form.reset();
+    )
+      .then(() => {
+        toast.success("Request Submitted!", {
+          position: "bottom-right",
+          autoClose: 2500,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
+      })
+      .then(() => {
+        form.reset();
+        // setNotify(false);
+      })
+      .catch(() => {
+        toast.error("Some Error Occured!", {
+          position: "bottom-right",
+          autoClose: 2500,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
+      });
   };
 
   return (
-    <Box sx={{ maxWidth: 450 }} mx="auto">
-      <form onSubmit={form.onSubmit(submitForm)}>
-        <TextInput
-          label="Name"
-          placeholder="Name"
-          {...form.getInputProps("name")}
-        />
-        <TextInput
-          label="Shop Name"
-          placeholder="Name"
-          {...form.getInputProps("shopName")}
-        />
-        <TextInput
-          label="Shop Address"
-          placeholder="Address"
-          {...form.getInputProps("shopAddress")}
-        />
-        <NumberInput
-          mt="sm"
-          hideControls
-          label="Shop Mobile Number"
-          placeholder="Mobile"
-          {...form.getInputProps("shopPhone")}
-        />
-        <div className="mt-3 col-span-6 ">
-          <label
-            htmlFor="time"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Time
-          </label>
-          <TimeInput
-            name="time"
-            className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-            format="12"
-            defaultValue={new Date()}
-            {...form.getInputProps("time")}
+    <>
+      <Box sx={{ maxWidth: 450 }} mx="auto">
+        <form onSubmit={form.onSubmit(submitForm)}>
+          <TextInput
+            label="Name"
+            placeholder="Name"
+            {...form.getInputProps("name")}
           />
-        </div>
-        <div className="mt-3 col-span-6 ">
-          <label
-            htmlFor="note"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Note for us
-          </label>
-          <Textarea placeholder="Note" {...form.getInputProps("note")} />
-        </div>
+          <TextInput
+            label="Shop Name"
+            placeholder="Name"
+            {...form.getInputProps("shopName")}
+          />
+          <TextInput
+            label="Shop Address"
+            placeholder="Address"
+            {...form.getInputProps("shopAddress")}
+          />
+          <NumberInput
+            mt="sm"
+            hideControls
+            label="Shop Mobile Number"
+            placeholder="Mobile"
+            {...form.getInputProps("shopPhone")}
+          />
+          <div className="mt-3 col-span-6 ">
+            <label
+              htmlFor="time"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Time
+            </label>
+            <TimeInput
+              name="time"
+              className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              format="12"
+              defaultValue={new Date()}
+              {...form.getInputProps("time")}
+            />
+          </div>
+          <div className="mt-3 col-span-6 ">
+            <label
+              htmlFor="note"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Note for us
+            </label>
+            <Textarea placeholder="Note" {...form.getInputProps("note")} />
+          </div>
 
-        <Group position="right" mt="md">
-          <button
-            type="submit"
-            className="
+          <Group position="right" mt="md">
+            <button
+              type="submit"
+              className="
       w-full
       px-6
       py-2.5
@@ -140,12 +167,13 @@ function Form() {
       transition
       duration-150
       ease-in-out"
-          >
-            Notify Us
-          </button>
-        </Group>
-      </form>
-    </Box>
+            >
+              Notify Us
+            </button>
+          </Group>
+        </form>
+      </Box>
+    </>
   );
 }
 export default Form;

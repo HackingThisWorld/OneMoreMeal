@@ -5,6 +5,7 @@ import { Modal, useMantineTheme } from "@mantine/core";
 import Form from "./NotifyUs";
 import Donate from "./Donate";
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
@@ -57,6 +58,17 @@ function Hero() {
             title="Donate a Meal"
           >
             <Donate />
+            <ToastContainer
+              position="bottom-right"
+              autoClose={5000}
+              hideProgressBar={true}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
           </Modal>
           <Modal
             opened={notify}
@@ -66,7 +78,20 @@ function Hero() {
             onClose={() => setNofify(false)}
             title="One More Meal"
           >
-            <Form />
+            <Form setNotify={setNofify} />
+            <ToastContainer
+              position="bottom-right"
+              autoClose={5000}
+              hideProgressBar={true}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
+            {/* Same as */}
+            <ToastContainer />
           </Modal>
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
