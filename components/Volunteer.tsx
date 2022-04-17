@@ -32,7 +32,10 @@ const Volunteer = ({ data }) => {
   return (
     <>
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+        <h1 className="border-b-2 mt-10 mx-10 py-2 border-orange-700 text-5xl font-mw">
+          Pending Requests
+        </h1>
+        <div className="container px-5 py-12">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 -m-4">
             {volunteer.map((item, index) => {
               let myval = new Date(item.pickup_time);
@@ -42,7 +45,7 @@ const Volunteer = ({ data }) => {
               //   console.log(item.pickup_time);
               return (
                 <div key={item.id}>
-                  <div className="p-4">
+                  <div className="p-4 shadow-xl hover:shadow-2xl">
                     <div className="items-start h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative flex flex-col">
                       <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                         Name: {item.name}
