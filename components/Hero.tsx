@@ -2,7 +2,8 @@ import { Popover } from "@headlessui/react";
 import { MenuIcon } from "@heroicons/react/outline";
 import BannerImage from "../Assets/HeroBanner.jpg";
 import { Modal, useMantineTheme } from "@mantine/core";
-import Form from "../components/Form";
+import Form from "./NotifyUs";
+import Donate from "./Donate";
 import { useState } from "react";
 const navigation = [
   { name: "Product", href: "#" },
@@ -10,8 +11,9 @@ const navigation = [
   { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
 ];
- function Hero() {
-  const [opened, setOpened] = useState(false);
+function Hero() {
+  const [notify, setNofify] = useState(false);
+  const [donate, setDonate] = useState(false);
   return (
     <div className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -63,17 +65,17 @@ const navigation = [
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <Modal
-                  opened={opened}
+                  opened={notify}
                   transition="pop"
                   transitionDuration={400}
                   transitionTimingFunction="ease"
-                  onClose={() => setOpened(false)}
+                  onClose={() => setNofify(false)}
                   title="One More Meal"
                 >
                   <Form />
                 </Modal>
                 <button
-                  onClick={() => setOpened(true)}
+                  onClick={() => setNofify(true)}
                   className="rounded-md shadow"
                 >
                   <a
@@ -83,14 +85,27 @@ const navigation = [
                     Notify Us
                   </a>
                 </button>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
+                <Modal
+                  opened={donate}
+                  transition="pop"
+                  transitionDuration={400}
+                  transitionTimingFunction="ease"
+                  onClose={() => setDonate(false)}
+                  title="Donate a Meal"
+                >
+                  <Donate />
+                </Modal>
+                <button
+                  onClick={() => setDonate(true)}
+                  className="mt-3 sm:mt-0 sm:ml-3"
+                >
                   <a
                     href="#"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-orange-700 bg-orange-100 hover:bg-orange-200 md:py-4 md:text-lg md:px-10"
                   >
                     Donate Meal
                   </a>
-                </div>
+                </button>
               </div>
             </div>
           </main>
