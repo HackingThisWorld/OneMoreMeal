@@ -58,7 +58,7 @@ function Form({ setNotify }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: data.shopName,
+          name: data.name,
           shop_name: data.shopName,
           phone_number: data.shopPhone.toString(),
           address: data.shopAddress,
