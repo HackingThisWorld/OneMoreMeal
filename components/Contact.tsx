@@ -4,13 +4,28 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [data, setData] = React.useState({
-    fullname: '',
-    email: '',
-    message: '',
+    fullname: "",
+    email: "",
+    message: "",
   });
   function handleSubmit(e) {
     e.preventDefault();
     console.log(data);
+
+    try {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/form/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.fullname,
+          email: data.email,
+          message: data.message,
+        }),
+      });
+    } catch (error) {}
+
     // alert(`${data.fullname} ${data.email} ${data.message}`);
     toast.success("🦄 Wow so easy!", {
       position: "bottom-right",
