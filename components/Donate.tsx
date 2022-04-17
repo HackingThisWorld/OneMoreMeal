@@ -37,8 +37,8 @@ function Donate() {
   const submitForm = async (data: {
     name: "";
     email: "";
-    shopPhone: undefined;
-    amount: undefined;
+    shopPhone: number;
+    amount: null;
   }) => {
     console.log(data);
 
@@ -50,7 +50,7 @@ function Donate() {
       body: JSON.stringify({
         name: data.name,
         email: data.email,
-        contact_number: parseInt(data.shopPhone),
+        contact_number: data.shopPhone.toString(),
         amount: parseFloat(data.amount),
       }),
     });

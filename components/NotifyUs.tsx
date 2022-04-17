@@ -48,8 +48,6 @@ function Form() {
     time: Date | undefined;
     note: string | undefined;
   }) => {
-    console.log(data);
-
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/form/requests`,
       {
@@ -60,7 +58,7 @@ function Form() {
         body: JSON.stringify({
           name: data.shopName,
           shop_name: data.shopName,
-          phone_number: data.shopPhone,
+          phone_number: data.shopPhone.toString(),
           address: data.shopAddress,
           note: data.note || null,
           pickup_time: data.time.toISOString(),
