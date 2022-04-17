@@ -34,9 +34,33 @@ function Donate() {
     }),
   });
 
+  const submitForm = async (data: {
+    name: "";
+    email: "";
+    shopPhone: undefined;
+    amount: undefined;
+  }) => {
+    console.log(data);
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/form/donate`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        contact_number: parseInt(data.shopPhone),
+        amount: parseFloat(data.amount),
+      }),
+    });
+
+    form.reset();
+  };
+
   return (
     <Box sx={{ maxWidth: 450 }} mx="auto">
-      <form onSubmit={form.onSubmit((values) => console.log(values))}>
+      <form onSubmit={form.onSubmit(submitForm)}>
         <TextInput
           label="Name"
           placeholder="Name"
