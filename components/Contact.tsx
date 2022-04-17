@@ -4,9 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [data, setData] = React.useState({
-    fullname: "",
-    email: "",
-    message: "",
+    fullname: '',
+    email: '',
+    message: '',
   });
   function handleSubmit(e) {
     e.preventDefault();
@@ -107,17 +107,17 @@ const Contact = () => {
               <div className="p-2 w-full">
                 <button
                   onClick={handleSubmit}
-                  className="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"
+                  className="flex mx-auto font-mw text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"
                 >
-                  Click Me Senpai
+                  Send
                 </button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <a className="text-orange-500">example@email.com</a>
+                <a className="text-orange-500">hacker@mlh.com</a>
                 <p className="leading-normal my-5">
                   49 Smith St.
                   <br />
-                  Saint Cloud, MN 56301
+                  Maple Road, MLH 56301
                 </p>
               </div>
             </div>
